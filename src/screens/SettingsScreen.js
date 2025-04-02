@@ -1,17 +1,16 @@
 import React from 'react';
 import { View, Text, Switch, StyleSheet } from 'react-native';
-import { useTheme } from '../context/ThemeContext';
 
 const SettingsScreen = () => {
-  const { isDarkMode, setIsDarkMode } = useTheme();
+  // const { isDarkMode, setIsDarkMode } = useTheme();
 
   return (
-    <View style={[styles.container, isDarkMode ? styles.darkBackground : styles.lightBackground]}>
+    <View style={[styles.container]}>
       <View style={styles.settingItem}>
-        <Text style={[styles.settingText, isDarkMode ? styles.darkText : styles.lightText]}>
+        <Text style={[styles.settingText]}>
           Dark Mode
         </Text>
-        <Switch value={isDarkMode} onValueChange={setIsDarkMode} />
+        {/* <Switch value={isDarkMode} onValueChange={setIsDarkMode} /> */}
       </View>
     </View>
   );
